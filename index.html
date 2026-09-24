@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>AMORA | Moda Feminina</title>
+
+  <meta
+    name="description"
+    content="Loja fictícia de moda feminina criada para demonstração de portfólio."
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- BARRA SUPERIOR -->
+  <div class="top-bar">
+    FRETE GRÁTIS ACIMA DE R$ 299 • 5% OFF NO PIX
+  </div>
+
+
+  <!-- CABEÇALHO -->
+  <header id="header">
+
+    <button
+      class="menu-button"
+      onclick="toggleMenu()"
+      aria-label="Abrir menu"
+    >
+      ☰
+    </button>
+
+    <a href="#inicio" class="logo">
+      AMORA
+      <span>MODA FEMININA</span>
+    </a>
+
+    <nav id="nav">
+      <a href="#inicio">Início</a>
+      <a href="#novidades">Novidades</a>
+      <a href="#colecao">Coleção</a>
+      <a href="#destaques">Mais vendidos</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+    </nav>
+
+    <div class="header-actions">
+      <button onclick="openSearch()" aria-label="Pesquisar">
+        ⌕
+      </button>
+
+      <button onclick="openCart()" aria-label="Sacola">
+        Sacola <span id="cart-count">0</span>
+      </button>
+    </div>
+
+  </header>
+
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+
+      <div class="hero-content">
+
+        <p class="eyebrow">
+          Nova coleção • Primavera 2026
+        </p>
+
+        <h1>
+          Vista aquilo<br>
+          que faz você<br>
+          <em>sentir.</em>
+        </h1>
+
+        <p>
+          Peças femininas criadas para acompanhar
+          todos os seus momentos.
+        </p>
+
+        <a href="#colecao" class="primary-button">
+          Descobrir coleção
+        </a>
+
+      </div>
+
+      <div class="hero-side">
+        <span>AMORA</span>
+        <p>Essencialmente você.</p>
+      </div>
+
+    </section>
+
+
+    <!-- CATEGORIAS -->
+    <section class="categories">
+
+      <a href="#colecao" class="category">
+        <span>01</span>
+        <h3>Vestidos</h3>
+      </a>
+
+      <a href="#colecao" class="category">
+        <span>02</span>
+        <h3>Conjuntos</h3>
+      </a>
+
+      <a href="#colecao" class="category">
+        <span>03</span>
+        <h3>Blusas</h3>
+      </a>
+
+      <a href="#colecao" class="category">
+        <span>04</span>
+        <h3>Calças</h3>
+      </a>
+
+    </section>
+
+
+    <!-- NOVIDADES -->
+    <section class="new-arrivals" id="novidades">
+
+      <div class="section-title">
+        <div>
+          <p>Acabou de chegar</p>
+          <h2>Novidades</h2>
+        </div>
+
+        <a href="#colecao">
+          Ver coleção →
+        </a>
+      </div>
+
+
+      <div class="products-grid">
+
+        <article class="product-card">
+
+          <div class="product-image">
+            <span class="tag">Novo</span>
+
+            <img
+              src="https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=800&q=85"
+              alt="Vestido feminino"
+            >
+
+            <button
+              onclick="addToCart('Vestido Serena')"
+              class="quick-buy"
+            >
+              Adicionar à sacola
+            </button>
+          </div>
+
+          <div class="product-info">
+            <h3>Vestido Serena</h3>
+            <p>R$ 189,90</p>
+            <span>ou 3x de R$ 63,30</span>
+          </div>
+
+        </article>
+
+
+        <article class="product-card">
+
+          <div class="product-image">
+            <span class="tag">Novo</span>
+
+            <img
+              src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=800&q=85"
+              alt="Calça feminina"
+            >
+
+            <button
+              onclick="addToCart('Calça Aurora')"
+              class="quick-buy"
+            >
+              Adicionar à sacola
+            </button>
+          </div>
+
+          <div class="product-info">
+            <h3>Calça Aurora</h3>
+            <p>R$ 159,90</p>
+            <span>ou 3x de R$ 53,30</span>
+          </div>
+
+        </article>
+
+
+        <article class="product-card">
+
+          <div class="product-image">
+
+            <img
+              src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=800&q=85"
+              alt="Look feminino"
+            >
+
+            <button
+              onclick="addToCart('Conjunto Luna')"
+              class="quick-buy"
+            >
+              Adicionar à sacola
+            </button>
+          </div>
+
+          <div class="product-info">
+            <h3>Conjunto Luna</h3>
+            <p>R$ 219,90</p>
+            <span>ou 4x de R$ 54,98</span>
+          </div>
+
+        </article>
+
+
+        <article class="product-card">
+
+          <div class="product-image">
+            <span class="tag sale">-20%</span>
+
+            <img
+              src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=800&q=85"
+              alt="Blusa feminina"
+            >
+
+            <button
+              onclick="addToCart('Blusa Íris')"
+              class="quick-buy"
+            >
+              Adicionar à sacola
+            </button>
+          </div>
+
+          <div class="product-info">
+            <h3>Blusa Íris</h3>
+
+            <p>
+              <del>R$ 129,90</del>
+              R$ 103,90
+            </p>
+
+            <span>ou 2x de R$ 51,95</span>
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- BANNER -->
+    <section class="collection-banner" id="colecao">
+
+      <div class="collection-content">
+
+        <p>Coleção</p>
+
+        <h2>
+          Leveza<br>
+          em cada <em>detalhe.</em>
+        </h2>
+
+        <p class="collection-description">
+          Tons naturais, tecidos leves e formas
+          que acompanham o movimento do corpo.
+        </p>
+
+        <a href="#destaques">
+          Explorar coleção
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- MAIS VENDIDOS -->
+    <section class="bestsellers" id="destaques">
+
+      <div class="section-title centered">
+        <div>
+          <p>Os favoritos</p>
+          <h2>Mais vendidos</h2>
+        </div>
+      </div>
+
+
+      <div class="products-grid">
+
+        <article class="product-card">
+
+          <div class="product-image">
+
+            <img
+              src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=800&q=85"
+              alt="Vestido midi"
+            >
+
+            <button
+              onclick="addToCart('Vestido Amélie')"
+              class="quick-buy"
+            >
+              Adicionar à sacola
+            </button>
+
+          </div>
+
+          <div class="product-info">
+            <h3>Vestido Amélie</h3>
+            <p>R$ 229,90</p>
+            <span>ou 4x de R$ 57,48</span>
+          </div>
+
+        </article>
+
+
+        <article class="product-card">
+
+          <div class="product-image">
+
+            <img
+              src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=800&q=85"
+              alt="Look feminino"
+            >
+
+            <button
+              onclick="addToCart('Conjunto Maya')"
+              class="quick-buy"
+            >
+              Adicionar à sacola
+            </button>
+
+          </div>
+
+          <div class="product-info">
+            <h3>Conjunto Maya</h3>
+            <p>R$ 199,90</p>
+            <span>ou 3x de R$ 66,63</span>
+          </div>
+
+        </article>
+
+
+        <article class="product-card">
+
+          <div class="product-image">
+
+            <img
+              src="https://images.unsplash.com/photo-1581044777550-4cfa60707c03?auto=format&fit=crop&w=800&q=85"
+              alt="Moda feminina"
+            >
+
+            <button
+              onclick="addToCart('Blazer Siena')"
+              class="quick-buy"
+            >
+              Adicionar à sacola
+            </button>
+
+          </div>
+
+          <div class="product-info">
+            <h3>Blazer Siena</h3>
+            <p>R$ 259,90</p>
+            <span>ou 5x de R$ 51,98</span>
+          </div>
+
+        </article>
+
+
+        <article class="product-card">
+
+          <div class="product-image">
+
+            <img
+              src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e?auto=format&fit=crop&w=800&q=85"
+              alt="Look casual feminino"
+            >
+
+            <button
+              onclick="addToCart('Calça Siena')"
+              class="quick-buy"
+            >
+              Adicionar à sacola
+            </button>
+
+          </div>
+
+          <div class="product-info">
+            <h3>Calça Siena</h3>
+            <p>R$ 169,90</p>
+            <span>ou 3x de R$ 56,63</span>
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- SOBRE A MARCA -->
+    <section class="about" id="sobre">
+
+      <div class="about-image">
+
+        <img
+          src="https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?auto=format&fit=crop&w=1200&q=85"
+          alt="Loja de moda feminina"
+        >
+
+      </div>
+
+
+      <div class="about-content">
+
+        <p class="eyebrow dark">
+          Nossa essência
+        </p>
+
+        <h2>
+          Moda para mulheres<br>
+          que vestem sua<br>
+          própria <em>história.</em>
+        </h2>
+
+        <p>
+          A AMORA nasceu para criar uma experiência de moda
+          leve, elegante e contemporânea.
+        </p>
+
+        <p>
+          Acreditamos que cada peça deve fazer mais do que
+          vestir: deve acompanhar momentos, expressar
+          personalidade e fazer você se sentir bem.
+        </p>
+
+        <a href="#novidades">
+          Conheça nossas peças →
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- BENEFÍCIOS -->
+    <section class="benefits">
+
+      <div>
+        <strong>Frete grátis</strong>
+        <span>Nas compras acima de R$ 299</span>
+      </div>
+
+      <div>
+        <strong>5% OFF</strong>
+        <span>Pagamento via PIX</span>
+      </div>
+
+      <div>
+        <strong>Troca fácil</strong>
+        <span>Primeira troca gratuita</span>
+      </div>
+
+      <div>
+        <strong>Compra segura</strong>
+        <span>Ambiente protegido</span>
+      </div>
+
+    </section>
+
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter" id="contato">
+
+      <p>AMORA CLUB</p>
+
+      <h2>
+        Novidades que chegam<br>
+        primeiro para <em>você.</em>
+      </h2>
+
+      <p class="newsletter-text">
+        Cadastre seu e-mail e receba novidades,
+        lançamentos e condições especiais.
+      </p>
+
+      <form onsubmit="subscribe(event)">
+
+        <input
+          type="email"
+          id="newsletter-email"
+          placeholder="Seu melhor e-mail"
+          required
+        >
+
+        <button type="submit">
+          Quero participar
+        </button>
+
+      </form>
+
+      <div id="newsletter-message"></div>
+
+    </section>
+
+  </main>
+
+
+  <!-- RODAPÉ -->
+  <footer>
+
+    <div class="footer-brand">
+
+      <div class="footer-logo">
+        AMORA
+      </div>
+
+      <p>Moda feminina</p>
+
+    </div>
+
+
+    <div class="footer-column">
+      <strong>Institucional</strong>
+      <a href="#sobre">Sobre a AMORA</a>
+      <a href="#contato">Contato</a>
+      <a href="#">Trocas e devoluções</a>
+    </div>
+
+
+    <div class="footer-column">
+      <strong>Atendimento</strong>
+      <p>Segunda a sexta</p>
+      <p>09h às 18h</p>
+      <p>(43) 99999-9999</p>
+    </div>
+
+
+    <div class="footer-column">
+      <strong>Siga a AMORA</strong>
+      <p>Instagram</p>
+      <p>TikTok</p>
+      <p>Pinterest</p>
+    </div>
+
+
+    <div class="footer-bottom">
+      <p>© 2026 AMORA Moda Feminina</p>
+      <p>Projeto fictício desenvolvido para portfólio.</p>
+    </div>
+
+  </footer>
+
+
+  <!-- SACOLA LATERAL -->
+  <div class="cart-overlay" id="cart-overlay" onclick="closeCart()"></div>
+
+  <aside class="cart" id="cart">
+
+    <div class="cart-header">
+
+      <h2>Sua sacola</h2>
+
+      <button onclick="closeCart()">
+        ✕
+      </button>
+
+    </div>
+
+    <div id="cart-items">
+
+      <p class="empty-cart">
+        Sua sacola está vazia.
+      </p>
+
+    </div>
+
+    <div class="cart-footer">
+
+      <p>
+        Projeto demonstrativo de e-commerce.
+      </p>
+
+      <button onclick="demoCheckout()">
+        Finalizar compra
+      </button>
+
+    </div>
+
+  </aside>
+
+
+  <!-- PESQUISA -->
+  <div class="search-box" id="search-box">
+
+    <button onclick="closeSearch()">
+      ✕
+    </button>
+
+    <p>O que você procura?</p>
+
+    <input
+      type="text"
+      placeholder="Vestidos, blusas, conjuntos..."
+    >
+
+  </div>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
